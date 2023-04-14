@@ -1,0 +1,477 @@
+@charset "utf-8";
+@media (min-width: 768px){
+
+/* Global */
+	*{
+		font-family: sans-serif;
+	}
+	body{
+		background: rgba(204,105,224,1);
+		background: -moz-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		background: -webkit-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		background: -o-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		background: linear-gradient(135deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		margin: 0px;
+		overflow-x: hidden;
+		min-height: 100vh;
+	}
+	main{
+		justify-content: center;
+		align-items: center;
+		display: inline-block;
+		width: 99%;	
+		margin: 10px;
+		padding-bottom: 20px;
+		/* Temp Below 
+		background-color: green;*/
+	}
+	.main{
+		width:45%;
+		display: inline-block;
+		margin: 10px;
+		/* Temp Below 
+		background-color: cyan;*/
+	}
+	section{
+		width: 25%;
+		display: inline-block;
+		margin: 10px;
+		/* Temp Below 
+		background-color: red;*/
+	}
+/* Nav Bar */
+	#navbar{
+		overflow: hidden;
+		background-color: #333;
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: sticky;
+		height: 47px;
+		display: block;
+		margin: 0px 0px 20px 0px;
+		z-index: 999;
+	}
+	#navbar a{
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		height: 47px;
+		border-left: solid #333 2px;
+		border-right: solid #333 2px;
+	}
+	#navbar a:hover{
+		background-color: #ddd;
+		color: black;
+	}
+	#navbar a.active {
+		background-color: #ddd;
+		color: black;
+	}
+	#homeLink{
+		margin: 0;
+		top: 0;
+		left: 0;
+	}
+	#navbar a.icon{
+		background: black;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: none;
+		visibility: hidden;
+	}
+	.mobileTitle{
+		display: hidden;
+		visibility: hidden;
+	}
+	.innerFooterDiv{
+		display: flex;
+		text-align: center;
+		align-content: center;
+		justify-content: center;
+	}
+	.footer{
+		position: relative;
+		bottom: 0;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		text-align: center;
+		height: 60px;
+		z-index: 999999999;
+		
+		/*
+		background: rgba(60, 60, 60, 0.6);
+		background: -moz- rgba(60, 60, 60, 0.6);
+		background: -webkit- rgba(60, 60, 60, 0.6);
+		background: -o- rgba(60, 60, 60, 0.6);
+		*/
+	}
+	div.footerIconDivs{
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		float: left;
+		padding-left: 10px;
+	}
+	img.footerIcons{
+		height: 30px;
+		width: auto;
+	}
+/* End Of Nav Bar */
+
+	section h1{
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 26px;
+		color: #fff;
+	}
+	.box{
+		border-radius: 25px;
+		border-radius: 25px;
+		background-color: #fff;
+		padding: 30px;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.box h1{
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 26px;
+		color: #015a96;
+	}
+	.box h2{
+		margin-bottom: 20px;
+		text-align: center;
+		font-size: 18px;
+		color: #015a96;
+	}
+	.box h3{
+		font-size: 30px;
+		margin: 0;
+	}
+	.box h4{
+		font-size: 20px;
+	}
+	.box button{
+		border: 2px solid #8d0cf7;
+		width: 40%;
+		height: 50px;
+		border-radius: 6px;
+		cursor: pointer;
+		font-size: 15px;
+		font-weight: bold;
+	}
+	.box button:hover{
+		color: #fff;
+		background-color: #8d0cf7;
+	}
+	.box tr{
+		line-height: 80px;
+	}
+	.box label{
+		font-size: 24px;
+		color: #015a96;
+		font-family: sans-serif;
+	}
+	.box input{
+		user-select: none;
+		height: 40px;
+		width: 100%;
+		border-radius: 6px;
+		border: none;
+		border: 2px solid #8d0cf7;
+		outline: none;
+		font-size: 24px;
+	}
+	.box input::placeholder{
+		font-size: 24px;
+		padding: 0px 0px 0px 5px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.box table{
+		margin: 0px;
+	}
+/* End Of Global */
+
+	
+	
+	
+	
+	
+	
+/* Icon Converter Specific */
+	.frm-convert{
+		width:100%;
+	}
+	.uploadBox{
+		border-radius: 5px;
+		box-shadow: -5px 10px 30px rgba(1, 90, 150, 0.3);
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+		outline: 2px dashed #015a96;
+		outline-offset: -10px;
+		-webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+		transition: outline-offset .15s ease-in-out, background-color .15s linear;
+		font-size: 1.25rem;
+		position: relative;
+		padding: 60px 0px 0px 0px;
+		height: 200px;
+		
+		background: rgba(204,105,224,1);
+		background: -moz-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		background: -webkit-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		background: -o-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		background: linear-gradient(135deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		display: block;
+	}
+	.uploadText{
+		font-size: 26px !important;
+		color: #fff !important;
+		cursor: pointer !important;
+	}
+	.uploadBox svg{
+		fill: white;
+	}
+	.buttonAreas{
+		width: 100%;
+		text-align: center;
+		align-items: center;
+		align-content: center;
+	}
+	.form-control{
+		width: 39% !important;		
+	}
+	.form-control::placeholder{
+		font-size: 15px !important;
+		vertical-align: middle;
+		
+	}
+/* End Of Icon Converter Specific */	
+	
+
+	
+/* Weight Converter Specific */	
+	#inputKilograms::placeholder{
+		text-align: left !important;
+		padding-left: 5px !important;
+	}
+	#inputPounds::placeholder{
+		text-align: left !important;
+		padding-left: 5px !important;		
+	}
+	#inputOunces::placeholder{
+		text-align: left !important;
+		padding-left: 5px !important;
+	}
+	#inputGrams::placeholder{
+		text-align: left !important;
+		padding-left: 5px !important;
+	}
+	#inputStones::placeholder{
+		text-align: left !important;
+		padding-left: 5px !important;
+	}
+	
+/* End Of Weight Converter Specific */		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/* SVG Converter Specific */
+	.svgSection{
+		text-align: center;
+		padding: 30px;
+	}
+	.svgInputArea{
+		width: 100%;
+		border: 1px solid #8d0cf7;
+		border-radius: 5px;
+		padding: 5px;
+		margin: 10px 10px 0px 0px;
+		resize: vertical;
+	}
+/* End Of SVG Converter Specific */		
+
+/* Main Home */
+	#lul{
+		height: 65px;
+		width: 60px;
+		position: fixed;
+		z-index: 9999;
+		top: 0px;
+		right: 80px;
+		vertical-align: middle;
+		text-align: center;
+		
+		
+		background: #ddd;
+	}
+	#shh{
+		width: 50px;
+		height: auto;
+		margin-top: 5px;
+	}
+	.forTheMeme{
+	height: 1px;
+	width: 1px;
+	position: fixed;
+	top: 420px;
+	left: 69px;
+}
+	
+#twitterEmbed{
+	width: 100%;
+	border-radius: 25px;
+}
+	
+	
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+	text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+	#timeDiv1{
+		display: inline-block;
+		width: 60%;
+	}
+	.weatherDivs{
+		display: inline-block;
+		vertical-align: bottom;
+		width: 40%;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-top: 2%;
+		padding-bottom: 2%;
+		border-bottom: solid gray 1px;
+	}
+	.temperature{
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+	}
+	
+	#temperature1{
+		cursor: pointer;
+		display: inline-block;
+		margin: 0;
+	}
+	#temperature2{
+		cursor: pointer;
+		display: inline-block;
+		margin: 0;
+	}
+	
+	#weatherIcon{
+		display: inline-block;
+	}
+	.prev{
+		left: 0;
+	}	
+/* Position the "next button" to the right */
+	
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #015a96;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+	
+/* End Of Main Home */
+	
+	
+	
+	
+}
