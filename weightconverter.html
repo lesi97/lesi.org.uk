@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weight Converter</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /><link href="CSS/desktopApps.css" rel="stylesheet">
+<link href="CSS/mobileApps.css" rel="stylesheet">
+<link href="CSS/tabletApps.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="JS/jquery-3.1.0.min.js"></script>
+<script src="JS/hidingCat.js"></script>	
+	
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8842336286886184"
+     crossorigin="anonymous"></script>	
+</head>
+
+<body>
+<div id="lul"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img id="shh" src="images/cat4.png"></a></div>
+	
+	
+	<!-- Nav Bar -->
+	<div id="navbar">
+	<a id="homeLink" 
+		   href="home.html" 
+		   style="padding: 0 !important;
+				  background-color: #333 !important;
+				  border: none !important;">
+			<img src="images/emote56.png"
+				 width="47px" height="47px;">
+		</a>
+		<div id="myLinks">
+		<a href="home.html"
+		   style="border-left: none !important;">Home</a>
+		<a href="aspectratiocalculator.html">Aspect Ratio Calculator
+		</a>
+		<a  class="hiddenNavPage" href="pdfconverter.html">PDF Converter</a>	
+		<a class="hiddenNavPage" href="icoconverter.html">Icon Converter</a>
+		<a href="passwordgenerator.html">Password Generator</a>
+		<a class="hiddenNavPage" href="svgconverter.html">SVG Converter</a>
+		<a class="active"
+		   href="weightconverter.html">Weight Converter</a>
+		
+		<a href="https://store.lesi.org.uk" target="_blank">Store</a>		
+		</div>	
+  
+ <a class="icon" onclick="mobileMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+		
+</div>
+	
+	<!-- End Of Nav Bar	-->
+	
+	
+<main>	
+<section style="float: left">&nbsp;</section>
+
+	
+<div class="main">
+	<div class="box">
+		<h1>Weight Converter</h1>
+		<h2>Type a value in any of the fields to convert between weight measurements:</h2>
+		
+		<table width="100%"
+			   border="0"
+			   cellspacing="0"
+			   cellpadding="0">
+			<tbody>
+				<tr>
+					<td id="weightConverterCol">
+						<label>Kilograms &#40;kg&#41;</label>
+					</td>
+					<td align="right">
+						<input id="inputKilograms"
+							   type="number"
+							   placeholder="Kilograms"
+							   oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)"></td>
+				</tr>
+				<tr>
+					<td>
+						<label>Pounds &#40;lbs&#41;</label>
+					</td>
+					<td align="right">
+						<input id="inputPounds"
+							   type="number"
+							   placeholder="Pounds"
+							   oninput="weightConverter(this.id,this.value)"
+							   onchange="weightConverter(this.id,this.value)">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Ounces &#40;oz&#41;</label>
+					</td>
+					<td align="right">
+						<input id="inputOunces"
+							   type="number"
+							   placeholder="Ounces"
+							   oninput="weightConverter(this.id,this.value)"
+							   onchange="weightConverter(this.id,this.value)">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Grams &#40;g&#41;</label>
+					</td>
+					<td align="right">
+						<input id="inputGrams"
+							   type="number"
+							   placeholder="Grams"
+							   oninput="weightConverter(this.id,this.value)"
+							   onchange="weightConverter(this.id,this.value)">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Stones &#40;st.&#41;</label>
+					</td>
+					<td align="right">
+						<input id="inputStones"
+							   type="number"
+							   placeholder="Stones"
+							   oninput="weightConverter(this.id,this.value)"
+							   onchange="weightConverter(this.id,this.value)">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+	
+	
+<section style="float: right">&nbsp;</section>
+</main>	
+	
+	
+<!-- Secret -->
+<a target="_blank" href="https://twitch.tv/liight2k">
+<img class="forTheMeme" src="images/ltoe.png" alt="The sacred image is missing, plz forgiv"></a>	
+	
+<footer class="footer">
+	<div class="innerFooterDiv">
+		
+	<div class="footerIconDivs" style="margin-left: 0;">
+		<a id="twitch" target="_blank">
+			<img class="footerIcons" src="images/socials/twitch.svg" alt="Twitch Icon">
+		</a>
+		</div>
+		
+	<div class="footerIconDivs">
+		<a id="youtube" target="_blank">
+			<img  class="footerIcons" src="images/socials/youtube.svg" alt="YouTube Icon">
+		</a>
+		</div>
+		
+	<div class="footerIconDivs">
+		<a id="tiktok" target="_blank">
+			<img  class="footerIcons" src="images/socials/tiktok.svg" alt="TikTok Icon">
+		</a>
+		</div>
+		
+	<div class="footerIconDivs">
+		<a id="twitter" target="_blank">
+			<img  class="footerIcons" src="images/socials/twitter.svg" alt="Twitter Icon">
+		</a>
+		</div>
+		
+	<div class="footerIconDivs">
+		<a id="instagram" target="_blank">
+			<img class="footerIcons" src="images/socials/instagram.svg" alt="Instagram Icon">
+		</a>
+		</div>
+	</div>
+	</footer>
+	
+
+	
+<!-- Scripts -->
+<script src="JS/links.js"></script>
+	<script src="JS/weightConverter.js"></script>
+	<script src="JS/mobileMenu.js"></script>
+<!-- Scripts -->
+</body>
+</html>
