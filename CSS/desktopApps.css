@@ -14,33 +14,45 @@
 		margin: 0px;
 		overflow-x: hidden;
 		min-height: 100vh;
+		text-align: center;
 	}
-	main{
-		justify-content: center;
-		align-items: center;
+	main {
+		width: 45%;
 		display: inline-block;
-		width: 99%;	
-		margin: 10px;
+		margin-left: auto;
 		padding-bottom: 20px;
+		vertical-align: top;
+		
 		/* Temp Below 
 		background-color: green;*/
 	}
-	.main{
-		width:45%;
+	.main {
+		width: 100%;
+		margin: auto;
 		display: inline-block;
-		margin: 10px;
 		/* Temp Below 
 		background-color: cyan;*/
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 	}
-	section{
-		width: 25%;
-		display: inline-block;
+	section {
+		width: 24%;
 		margin: 10px;
+		display: inline-block;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 		/* Temp Below 
 		background-color: red;*/
 	}
-/* Nav Bar */
-	#navbar{
+	#rightSection {
+		margin: 10px;
+		width: 24%;
+		float: right;
+	}
+	/* Nav Bar */
+	#navbar {
 		overflow: hidden;
 		background-color: #333;
 		width: 100%;
@@ -51,6 +63,9 @@
 		display: block;
 		margin: 0px 0px 20px 0px;
 		z-index: 999;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 	}
 	#navbar a{
 		float: left;
@@ -96,7 +111,7 @@
 		align-content: center;
 		justify-content: center;
 	}
-	.footer{
+	.footer {
 		position: relative;
 		bottom: 0;
 		align-content: center;
@@ -106,7 +121,9 @@
 		text-align: center;
 		height: 60px;
 		z-index: 999999999;
-		
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 		/*
 		background: rgba(60, 60, 60, 0.6);
 		background: -moz- rgba(60, 60, 60, 0.6);
@@ -330,9 +347,10 @@
 	.forTheMeme{
 	height: 1px;
 	width: 1px;
-	position: fixed;
+	/*position: fixed;
 	top: 420px;
-	left: 69px;
+	left: 69px;*/
+	position: absolute;
 }
 	
 #twitterEmbed{
@@ -369,7 +387,7 @@
 		display: inline-block;
 		width: 60%;
 	}
-	.weatherDivs{
+	.weatherDivs {
 		display: inline-block;
 		vertical-align: bottom;
 		width: 40%;
@@ -378,6 +396,9 @@
 		margin-top: 2%;
 		padding-bottom: 2%;
 		border-bottom: solid gray 1px;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 	}
 	.temperature{
 		display: inline-block;

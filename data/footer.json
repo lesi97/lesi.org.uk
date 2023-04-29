@@ -1,0 +1,34 @@
+{
+	"Footer": [
+		{
+			"Title": "Twitch",
+			"Image": "../images/socials/twitch.svg",
+			"Link": "https://twitch.tv/c_lesi",
+			"Active": true
+		},
+		{
+			"Title": "YouTube",
+			"Image": "../images/socials/youtube.svg",
+			"Link": "https://www.youtube.com/@C_Lesi",
+			"Active": true
+		},
+		{
+			"Title": "TikTok",
+			"Image": "../images/socials/tiktok.svg",
+			"Link": "https://www.tiktok.com/@c_lesi",
+			"Active": true
+		},
+		{
+			"Title": "Twitter",
+			"Image": "../images/socials/twitter.svg",
+			"Link": "https://twitter.com/Chris_Lesi",
+			"Active": true
+		},
+		{
+			"Title": "Instagram",
+			"Image": "../images/socials/instagram.svg",
+			"Link": "https://www.instagram.com/christian_lesi",
+			"Active": true
+		}
+	]
+}

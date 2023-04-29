@@ -1,70 +1,76 @@
-/*
-===============================================================
 
-Hi! Welcome to my little playground!
+function newWidth() {
 
-My name is Tobias Bogliolo. 'Open source' by default and always 'responsive',
-I'm a publicist, visual designer and frontend developer based in Barcelona. 
+    var ogWidthInput = document.getElementById("initial-width").value;
+    var ogHeightInput = document.getElementById("initial-height").value;
+    var newWidthInput = document.getElementById("new-width");
+    var newHeightInput = document.getElementById("new-height").value;
+    var aspectRatio = ogWidthInput / ogHeightInput;
 
-Here you will find some of my personal experiments. Sometimes usefull,
-sometimes simply for fun. You are free to use them for whatever you want 
-but I would appreciate an attribution from my work. I hope you enjoy it.
+    newWidthValue = Math.round(newHeightInput * aspectRatio);
+    newWidthInput.value = newWidthValue;
+}
 
-===============================================================
-*/
+function newHeight() {
 
-//Formulas:
-//New height = new width / (original width / original height).
-//New width = (original width / original height) * new height.
+    var ogWidthInput = document.getElementById("initial-width").value;
+    var ogHeightInput = document.getElementById("initial-height").value;
+    var newWidthInput = document.getElementById("new-width").value;
+    var newHeightInput = document.getElementById("new-height");
+    var aspectRatio = ogWidthInput / ogHeightInput;
 
-//Initial values:
-var initialWidth = 1920,
-    initialHeight = 1080,
-    newWidth,
-    newHeight;
+    newHeightValue = Math.round(newWidthInput/aspectRatio);
+    newHeightInput.value = newHeightValue;
+}
 
-$("#initial-width").val(initialWidth);
-$("#initial-height").val(initialHeight);
+function newWidth2() {
 
-//Get new values:
-function getValues(){
-  initialWidth = $("#initial-width").val();
-  initialHeight = $("#initial-height").val();
-  newWidth = $("#new-width").val();
-  newHeight = $("#new-height").val();
-};
+    var ogWidthInput = document.getElementById("initial-width").value;
+    var ogHeightInput = document.getElementById("initial-height").value;
+    var newWidthInput = document.getElementById("new-width");
+    var newHeightInput = document.getElementById("new-height").value;
+    var aspectRatio = ogWidthInput / ogHeightInput;
 
-//Aspect ratio:
-function getAspectRatio(){
-  //Formula: "Aspect Ratio = Width / Height".
-  return aspectRatio = initialWidth/initialHeight;
-};
+    if (ogWidthInput != "" && ogHeightInput != "") {
+        newWidthValue = Math.round(newHeightInput * aspectRatio);
+        if (newWidthValue != "0") {
+            console.log(newWidthValue);
+            newWidthInput.value = newWidthValue;
+        }
+    }
+}
 
-//Get new height:
-$("#new-width").on("change keyup", function(){
-  //Refresh data.
-  getValues();
-  getAspectRatio();
-  //Formula: "Height = Width / Aspect Ratio".
-  newHeight = Math.round(newWidth/aspectRatio);
-  //Output:
-  $("#new-height").val(newHeight);
-});
 
-//Get new width:
-$("#new-height").on("change keyup", function(){
-  //Refresh data.
-  getValues();
-  getAspectRatio();
-  //Formula: "Width = Aspect Ratio * Height".
-  newWidth = Math.round(newHeight*aspectRatio);
-  //Output:
-  $("#new-width").val(newWidth);
-});
+function newHeight2() {
 
-//Reset:
-$("#initial-width, #initial-height").on("change keyup", function(){
-  //Output:
-  $("#new-width").val("");
-  $("#new-height").val("");
-});
+    var ogWidthInput = document.getElementById("initial-width").value;
+    var ogHeightInput = document.getElementById("initial-height").value;
+    var newWidthInput = document.getElementById("new-width").value;
+    var newHeightInput = document.getElementById("new-height");
+    var aspectRatio = ogWidthInput / ogHeightInput;
+
+    if (ogWidthInput != "" && ogHeightInput != "") {
+            newHeightValue = Math.round(newWidthInput / aspectRatio);
+            if (newHeightValue != "0") {
+                console.log(newHeightValue);
+                newHeightInput.value = newHeightValue;
+            }
+    }
+}
+
+
+document.getElementById("initial-width").addEventListener("keyup", () => {
+    newHeight2();
+})
+document.getElementById("initial-height").addEventListener("keyup", () => {
+    newHeight2();
+})
+
+
+document.getElementById("new-width").addEventListener("keyup", () => {
+    newHeight();
+})
+document.getElementById("new-height").addEventListener("keyup", () => {
+    newWidth();
+})
+

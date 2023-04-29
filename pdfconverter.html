@@ -3,171 +3,143 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Icon Converter</title>
+<title>PDF Converter</title>
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" /><link href="CSS/desktopApps.css" rel="stylesheet">
 <link href="CSS/mobileApps.css" rel="stylesheet">
 <link href="CSS/tabletApps.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="JS/jquery-3.1.0.min.js"></script>
-<script src="JS/hidingCat.js"></script>	
 <script src="JS/pdfToPng.js"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>	
 </head>
 
 <body>
-<div id="lul"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img id="shh" src="images/cat4.png"></a></div>		
-	
-	
-	<!-- Nav Bar -->
-	<div id="navbar">
-		<a id="homeLink" 
-		   href="home.html" 
-		   style="padding: 0 !important;
-				  background-color: #333 !important;
-				  border: none !important;">
-			<img src="images/emote56.png"
-				 width="47px" height="47px;">
-		</a>
-		<div id="myLinks">
-		<a href="home.html"
-		   style="border-left: none !important;">Home</a>
-		<a href="aspectratiocalculator.html">Aspect Ratio Calculator
-		</a>
-		<a a class="active"
-		   href="pdfconverter.html">PDF Converter</a>	
-		<a href="icoconverter.html">Icon Converter</a>
-		<a href="passwordgenerator.html">Password Generator</a>
-		<a class="hiddenNavPage" href="svgconverter.html">SVG Converter</a>
-		<a href="weightconverter.html">Weight Converter</a>
-			
-		<a href="https://store.lesi.org.uk" target="_blank">Store</a>	
-		</div>	
-  
- <a class="icon" onclick="mobileMenu()">
-    <i class="fa fa-bars"></i>
-  </a>
-		
-</div>
-	
-	<!-- End Of Nav Bar	-->
-	
-	
-<script src="JS/jquery-3.1.0.min.js"></script>	
-	
-<main>	
-<section style="float: left">&nbsp;</section>
+	<div id="lul"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img id="shh" src="images/cat4.png"></a></div>
 
-	
-<div class="main">
-	<div class="box">
-		<div class="container-lg">
-			<h1>PDF to PNG Converter</h1>
-			<h2>Here you can upload any PDF file and convert it to a PNG file.<br>
-		<br>First upload your file and then select convert, this will download the first page only of the PDF as a PNG</h2>
-				<form class="frm-convert">
-				<div class="mb-3">
-					<div id="dropContainer" 
-						 align="center" 
-						 class="uploadBox">
-						<svg class="box2" 
-						 xmlns="http://www.w3.org/2000/svg" 
-						 width="50" 
-						 height="43" 
-						 viewBox="0 0 50 43">
-						<path d="M48.4 26.5c-.9 0-1.7.7-1.7 1.7v11.6h-43.3v-11.6c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v13.2c0 .9.7 1.7 1.7 1.7h46.7c.9 0 1.7-.7 1.7-1.7v-13.2c0-1-.7-1.7-1.7-1.7zm-24.5 6.1c.3.3.8.5 1.2.5.4 0 .9-.2 1.2-.5l10-11.6c.7-.7.7-1.7 0-2.4s-1.7-.7-2.4 0l-7.1 8.3v-25.3c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v25.3l-7.1-8.3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4l10 11.6z"></path>
-					</svg>
-					
-					<br>
-					<br>
-					
-					<div align="center">
-						<label for="pdfFileInput"
-							   class="uploadText"
-						   id="uploadText">
-							<strong>Choose a file</strong><span class="uploadBox__dragndrop"> or drag it here</span>
-						</label>
-						<input type="file"
-							   name="txt-files[]"
-							   id="pdfFileInput"
-							   class="uploadBox__file" 
-							   data-multiple-caption="{count} files selected" 
-							   accept="pdf" 
-							   multiple="" 
-							   style="display:none;">				
-					</div>
+
+	<div id="navbar"></div>
+
+
+	<script src="JS/jquery-3.1.0.min.js"></script>
+
+	<section style="float: left">&nbsp;</section>
+
+	<main>
+
+		<div class="main">
+			<div class="box">
+				<div class="container-lg">
+					<h1>PDF to PNG Converter</h1>
+					<h2>
+						Here you can upload any PDF file and convert it to a PNG file.<br>
+						<br>First upload your file and then select convert, this will download the first page only of the PDF as a PNG
+					</h2>
+					<form class="frm-convert">
+						<div class="mb-3">
+							<div id="dropContainer"
+								 align="center"
+								 class="uploadBox">
+								<svg class="box2"
+									 xmlns="http://www.w3.org/2000/svg"
+									 width="50"
+									 height="43"
+									 viewBox="0 0 50 43">
+									<path d="M48.4 26.5c-.9 0-1.7.7-1.7 1.7v11.6h-43.3v-11.6c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v13.2c0 .9.7 1.7 1.7 1.7h46.7c.9 0 1.7-.7 1.7-1.7v-13.2c0-1-.7-1.7-1.7-1.7zm-24.5 6.1c.3.3.8.5 1.2.5.4 0 .9-.2 1.2-.5l10-11.6c.7-.7.7-1.7 0-2.4s-1.7-.7-2.4 0l-7.1 8.3v-25.3c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v25.3l-7.1-8.3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4l10 11.6z"></path>
+								</svg>
+
+								<br>
+								<br>
+
+								<div align="center">
+									<label for="pdfFileInput"
+										   class="uploadText"
+										   id="uploadText">
+										<strong>Choose a file</strong><span class="uploadBox__dragndrop"> or drag it here</span>
+									</label>
+									<input type="file"
+										   name="txt-files[]"
+										   id="pdfFileInput"
+										   class="uploadBox__file"
+										   data-multiple-caption="{count} files selected"
+										   accept="pdf"
+										   multiple=""
+										   style="display:none;">
+								</div>
+							</div>
+
+							<br>
+
+
+
+							<div class="buttonAreas">
+								<p class="text-center">
+									<button type="submit" class="btn btn-primary btn-lg w-100" id="convertButton">Convert</button>
+								</p>
+							</div>
+						</div>
+					</form>
+
+
 				</div>
-			
-			<br>
-		
-		
 
-<div class="buttonAreas">
-            <p class="text-center">
-                <button type="submit" class="btn btn-primary btn-lg w-100" id="convertButton">Convert</button>
-            </p>
-</div></div>
-        </form>
-		
-	
-    </div>
-	
-	</div></div>
-	
-	
-<section style="float: right">&nbsp;</section>
-</main>	
-	
-	
-	
-<!-- Secret -->
-<a target="_blank" href="https://twitch.tv/liight2k">
-<img class="forTheMeme" src="images/ltoe.png" alt="The sacred image is missing, plz forgiv"></a>	
-	
-	
-<footer class="footer">
-	<div class="innerFooterDiv">
-		
-	<div class="footerIconDivs" style="margin-left: 0;">
-		<a id="twitch" target="_blank">
-			<img class="footerIcons" src="images/socials/twitch.svg" alt="Twitch Icon">
-		</a>
+			</div>
 		</div>
-		
-	<div class="footerIconDivs">
-		<a id="youtube" target="_blank">
-			<img  class="footerIcons" src="images/socials/youtube.svg" alt="YouTube Icon">
-		</a>
+
+	</main>
+		<section style="float: right">&nbsp;</section>
+
+
+
+
+	<!-- Secret -->
+	<a target="_blank" href="https://twitch.tv/liight2k">
+		<img class="forTheMeme" src="images/ltoe.png" alt="The sacred image is missing, plz forgiv">
+	</a>
+
+
+	<footer class="footer">
+		<div class="innerFooterDiv">
+
+			<div class="footerIconDivs" style="margin-left: 0;">
+				<a id="twitch" target="_blank">
+					<img class="footerIcons" src="images/socials/twitch.svg" alt="Twitch Icon">
+				</a>
+			</div>
+
+			<div class="footerIconDivs">
+				<a id="youtube" target="_blank">
+					<img class="footerIcons" src="images/socials/youtube.svg" alt="YouTube Icon">
+				</a>
+			</div>
+
+			<div class="footerIconDivs">
+				<a id="tiktok" target="_blank">
+					<img class="footerIcons" src="images/socials/tiktok.svg" alt="TikTok Icon">
+				</a>
+			</div>
+
+			<div class="footerIconDivs">
+				<a id="twitter" target="_blank">
+					<img class="footerIcons" src="images/socials/twitter.svg" alt="Twitter Icon">
+				</a>
+			</div>
+
+			<div class="footerIconDivs">
+				<a id="instagram" target="_blank">
+					<img class="footerIcons" src="images/socials/instagram.svg" alt="Instagram Icon">
+				</a>
+			</div>
 		</div>
-		
-	<div class="footerIconDivs">
-		<a id="tiktok" target="_blank">
-			<img  class="footerIcons" src="images/socials/tiktok.svg" alt="TikTok Icon">
-		</a>
-		</div>
-		
-	<div class="footerIconDivs">
-		<a id="twitter" target="_blank">
-			<img  class="footerIcons" src="images/socials/twitter.svg" alt="Twitter Icon">
-		</a>
-		</div>
-		
-	<div class="footerIconDivs">
-		<a id="instagram" target="_blank">
-			<img class="footerIcons" src="images/socials/instagram.svg" alt="Instagram Icon">
-		</a>
-		</div>
-	</div>
 	</footer>
-	
 
-	
-<!-- Scripts -->
-<script src="JS/links.js"></script>
+
+
+	<!-- Scripts -->
 	<script src="JS/pdfToPngConvert.js"></script>
 	<script src="JS/uploadBoxPDFtoPNG.js"></script>
-    <script defer type="module" src="JS/convert.js"></script>
-	<script src="JS/mobileMenu.js"></script>
-<!-- Scripts -->
-	
+	<script defer type="module" src="JS/convert.js"></script>
+	<script src="JS/scripts.js"></script>
+	<!-- Scripts -->
+
 </body>
 </html>
