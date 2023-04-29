@@ -1,0 +1,22 @@
+RewriteEngine on
+
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+
+DirectoryIndex home.html
+
+Redirect 302 "https://store.lesi.org.uk/aspectratiocalculator" "https://store.lesi.org.uk"
+Redirect 302 "https://store.lesi.org.uk/icoconverter" "https://store.lesi.org.uk"
+Redirect 302 "https://store.lesi.org.uk/passwordgenerator" "https://store.lesi.org.uk"
+Redirect 302 "https://store.lesi.org.uk/svgconverter" "https://store.lesi.org.uk"
+Redirect 302 "https://store.lesi.org.uk/weightconverter" "https://store.lesi.org.uk"
+
+Redirect 302 "https://store.lesi.org.uk/aspectratiocalculator/" "https://store.lesi.org.uk"
+Redirect 302 "https://store.lesi.org.uk/icoconverter/" "https://store.lesi.org.uk"
+Redirect 302 "https://store.lesi.org.uk/passwordgenerator/" "https://store.lesi.org.uk"
+Redirect 302 "https://store.lesi.org.uk/svgconverter/" "https://store.lesi.org.uk"
+Redirect 302 "https://store.lesi.org.uk/weightconverter/" "https://store.lesi.org.uk"
