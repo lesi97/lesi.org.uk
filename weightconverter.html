@@ -24,14 +24,15 @@
 	<section style="float: left">&nbsp;</section>
 
 	<main>
-			<div class="box">
+			<div class="box" id="box">
 				<h1>Weight Converter</h1>
 				<h2>Type a value in any of the fields to convert between weight measurements:</h2>
 
 				<table width="100%"
 					   border="0"
 					   cellspacing="0"
-					   cellpadding="0">
+					   cellpadding="0"
+					   id="weightConvTable">
 					<tbody>
 						<tr>
 							<td id="weightConverterCol">
@@ -39,6 +40,7 @@
 							</td>
 							<td align="right">
 								<input id="inputKilograms"
+									   class="inputsCss"
 									   type="number"
 									   placeholder="Kilograms"
 									   oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
@@ -50,6 +52,7 @@
 							</td>
 							<td align="right">
 								<input id="inputPounds"
+									   class="inputsCss"
 									   type="number"
 									   placeholder="Pounds"
 									   oninput="weightConverter(this.id,this.value)"
@@ -62,6 +65,7 @@
 							</td>
 							<td align="right">
 								<input id="inputOunces"
+									   class="inputsCss"
 									   type="number"
 									   placeholder="Ounces"
 									   oninput="weightConverter(this.id,this.value)"
@@ -74,6 +78,7 @@
 							</td>
 							<td align="right">
 								<input id="inputGrams"
+									   class="inputsCss"
 									   type="number"
 									   placeholder="Grams"
 									   oninput="weightConverter(this.id,this.value)"
@@ -86,6 +91,7 @@
 							</td>
 							<td align="right">
 								<input id="inputStones"
+									   class="inputsCss"
 									   type="number"
 									   placeholder="Stones"
 									   oninput="weightConverter(this.id,this.value)"

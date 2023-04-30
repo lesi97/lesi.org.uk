@@ -12,6 +12,23 @@
 		right: 10px;
 		top: 10px;
 	}
+	#nightmode {
+		text-align: left;
+		position: relative;
+	}
+
+	#labelSettings {
+		display: inline-block;
+		padding-bottom: 5px;
+	}
+
+	#inputCheckBoxSettings {
+		height: 20px;
+		width: 20px;
+		margin: 0px 0px 0px 10px;
+		position: absolute;
+		top: 2px;
+	}
 	body {
 		background: rgba(204,105,224,1);
 		background: -moz-linear-gradient(-180deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
@@ -206,13 +223,11 @@
 		margin-bottom: 20px;
 		text-align: center;
 		font-size: 26px;
-		color: #015a96;
 	}
 	.box h2{
 		margin-bottom: 20px;
 		text-align: center;
 		font-size: 18px;
-		color: #015a96;
 	}
 	.box button{
 		border: 2px solid #8d0cf7;
@@ -232,7 +247,6 @@
 	}
 	.box label{
 		font-size: 18px;
-		color: #015a96;
 		font-family: sans-serif;
 	}
 	.box input{

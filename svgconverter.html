@@ -31,7 +31,7 @@
 	</section>
 
 	<main>
-		<div class="box">
+		<div class="box" id="box">
 			<h1>SVG To PNG Converter</h1>
 			<h2>
 				Paste your SVG code in the box below <strong>&#40;The &lt;svg&gt; tag to &lt;/svg&gt; tag.&#41;</strong> and then press <br>
@@ -56,7 +56,7 @@
 					</tr>
 					<tr>
 						<td>&nbsp;</td>
-						<td align="left"><button id="svgPreviewSVGButton">Preview SVG</button></td>
+						<td align="left"><button id="svgPreviewSVGButton" class="buttonsCss">Preview SVG</button></td>
 					</tr>
 					<tr>
 						<td width="30%">
@@ -65,7 +65,8 @@
 						<td>
 							<input id="svgSelectPNGWidth"
 								   type="number"
-								   max="15999">
+								   max="15999"
+								   class="inputsCss">
 						</td>
 					</tr>
 					<tr>
@@ -75,12 +76,13 @@
 						<td>
 							<input id="svgSelectPNGHeight"
 								   type="number"
-								   max="15999">
+								   max="15999"
+								   class="inputsCss">
 						</td>
 					</tr>
 					<tr>
 						<td>&nbsp;</td>
-						<td align="left"><button id="svgGenerateSVGAsPNGButton">Generate SVG as PNG</button></td>
+						<td align="left"><button id="svgGenerateSVGAsPNGButton" class="buttonsCss">Generate SVG as PNG</button></td>
 					</tr>
 				</tbody>
 			</table>

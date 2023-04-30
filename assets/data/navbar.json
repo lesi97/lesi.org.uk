@@ -48,6 +48,14 @@
 			"Link": "https://store.lesi.org.uk",
 			"MobileHide": false,
 			"Active": false
+		},
+		{
+			"Title": "Settings",
+			"imageLight": "/assets/images/nav/settings-white.svg",
+			"imageDark": "/assets/images/nav/settings-black.svg",
+			"Link": "settings.html",
+			"MobileHide": false,
+			"Active": true
 		}
 	]
 }

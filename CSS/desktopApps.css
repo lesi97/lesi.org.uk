@@ -12,12 +12,28 @@
 		right: 10px;
 		top:10px;
 	}
+	#nightmode{
+		text-align: left;
+		position: relative;
+	}
+	#labelSettings {
+		display: inline-block;
+		padding-bottom: 5px;
+	}
+	#inputCheckBoxSettings {
+		height: 20px;
+		width: 20px;
+		margin: 0px 0px 0px 10px;
+		position: absolute;
+		top: 2px;
+
+	}
 	body {
-		background: rgba(204,105,224,1);
+		/*background: rgba(204,105,224,1);
 		background: -moz-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
 		background: -webkit-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
 		background: -o-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
-		background: linear-gradient(135deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		background: linear-gradient(135deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);*/
 		margin: 0px;
 		overflow-x: hidden;
 		min-height: 100vh;
@@ -62,7 +78,6 @@
 	/* Nav Bar */
 	#navbar {
 		overflow: hidden;
-		background-color: #333;
 		width: 100%;
 		top: 0;
 		left: 0;
@@ -74,6 +89,7 @@
 		-webkit-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
+		background-color: #333;
 	}
 	#navbar a{
 		float: left;
@@ -150,9 +166,8 @@
 		height: 30px;
 		width: auto;
 	}
-/* End Of Nav Bar */
-
-	section h1{
+	/* End Of Nav Bar */
+	section h1 {
 		margin-bottom: 20px;
 		text-align: center;
 		font-size: 26px;
@@ -161,7 +176,6 @@
 	.box{
 		border-radius: 25px;
 		border-radius: 25px;
-		background-color: #fff;
 		padding: 30px;
 		position: relative;
 		margin-left: auto;
@@ -171,13 +185,11 @@
 		margin-bottom: 20px;
 		text-align: center;
 		font-size: 26px;
-		color: #015a96;
 	}
 	.box h2{
 		margin-bottom: 20px;
 		text-align: center;
 		font-size: 18px;
-		color: #015a96;
 	}
 	.box h3{
 		font-size: 30px;
@@ -204,7 +216,6 @@
 	}
 	.box label{
 		font-size: 24px;
-		color: #015a96;
 		font-family: sans-serif;
 	}
 	.box input{
@@ -213,7 +224,7 @@
 		width: 100%;
 		border-radius: 6px;
 		border: none;
-		border: 2px solid #8d0cf7;
+		/*border: 2px solid #8d0cf7;*/
 		outline: none;
 		font-size: 24px;
 	}
@@ -226,10 +237,25 @@
 	.box table{
 		margin: 0px;
 	}
+
+
+	#displaySettings {
+		position: absolute;
+		left: 10px;
+		bottom
+	}
 /* End Of Global */
 
 	
-	
+	/* Settings */
+
+	  #labelSettings{
+		  font-size: 20px;
+	  }
+
+	#inputCheckBoxSettings {
+		
+	}
 	
 	
 	
@@ -240,11 +266,9 @@
 	}
 	.uploadBox{
 		border-radius: 5px;
-		box-shadow: -5px 10px 30px rgba(1, 90, 150, 0.3);
 		width: 100%;
 		justify-content: center;
 		text-align: center;
-		outline: 2px dashed #015a96;
 		outline-offset: -10px;
 		-webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
 		transition: outline-offset .15s ease-in-out, background-color .15s linear;
@@ -253,11 +277,13 @@
 		padding: 60px 0px 0px 0px;
 		height: 200px;
 		
+		/*
 		background: rgba(204,105,224,1);
 		background: -moz-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
 		background: -webkit-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
 		background: -o-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
 		background: linear-gradient(135deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
+		*/	
 		display: block;
 	}
 	.uploadText{
@@ -325,7 +351,6 @@
 	}
 	.svgInputArea{
 		width: 100%;
-		border: 1px solid #8d0cf7;
 		border-radius: 5px;
 		padding: 5px;
 		margin: 10px 10px 0px 0px;
