@@ -1,0 +1,35 @@
+{
+	"Weather": [
+		{
+			"Title": "Rain",
+			"animData": "/assets/images/lottie/weather/rain2.json",
+			"animType": "svg"
+		},
+		{
+			"Title": "Cloud",
+			"animData": "/assets/images/lottie/weather/cloudy3.json",
+			"animType": "svg"
+		},
+		{
+			"Title": "Snow",
+			"animData": "/assets/images/lottie/weather/snow2.json",
+			"animType": "svg"
+		},
+		{
+			"Title": "Clear",
+			"animData": "/assets/images/lottie/weather/sunny2.json",
+			"animType": "svg"
+		},
+		{
+			"Title": "Windy",
+			"animData": "/assets/images/lottie/weather/windy2.json",
+			"animType": "svg"
+		},
+		{
+			"Title": "Mist",
+			"animData": "/assets/images/lottie/weather/fog2.json",
+			"animType": "svg"
+		}
+	]
+}
+

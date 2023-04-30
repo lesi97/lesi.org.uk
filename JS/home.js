@@ -118,34 +118,60 @@ function getWeatherInfo() {
 	xhr.send();
 	updateWeather();
 }
-setInterval(getWeatherInfo(), 10000);
+setInterval(getWeatherInfo, 10000);
 
 function updateWeather() {
 
 	const mainArea = document.getElementById("box");
 	const weatherArea = document.getElementById("weather");
+	const weatherIconArea = document.getElementById("weatherIcon");
 
-	if (localStorage.getItem("weatherInfo")) {
-		const weatherSessionStorage = localStorage.getItem("weatherInfo");
-		const weatherData = JSON.parse(weatherSessionStorage);
-		const location = weatherData.name;
-		const temperature = Math.round(weatherData.main.temp);
-		const pressure = weatherData.main.pressure;
-		const humidity = weatherData.main.humidity;
-		const windSpeed = weatherData.wind.speed;
-		const milesPerHour = Math.round(parseInt(windSpeed) * 2.237);
-		const feelsLike = Math.round(weatherData.main.feels_like);
-		const weather = weatherData.weather[0].main;
-		const weatherIco = weatherData.weather[0].icon;
-		const weatherIconImage = '<img src="' + weatherIco + '"><!--<br>' + weather + '-->';
-		const weatherIcon = document.getElementById("weatherIcon");
-		const weatherInfo = '<div class="weatherDivs" style="margin-top:none; width="90%">Current weather in ' + location + '</div> <div class="weatherDivs">Temperature: <div onclick="convertTemp1()" id="temperature1">' + temperature + 'c</div></div><div class="weatherDivs">Feels Like: <div onclick="convertTemp2()" id="temperature2">' + feelsLike + 'c</div></div><div class="weatherDivs">Humidity: ' + humidity + '&#37;</div><div class="weatherDivs">Wind Speed: ' + milesPerHour + 'mph</div>';
-		weatherArea.innerHTML = weatherInfo;
-		weatherIcon.innerHTML = weatherIconImage;
-	} else {
-		setTimeout(getWeatherInfo, 100);
-	}
+	fetch('/assets/data/lottieWeather.json')
+		.then(response => response.json())
+		.then(data => {
+			let weatherIconData = data.Weather;
 
+			if (localStorage.getItem("weatherInfo")) {
+				const weatherSessionStorage = localStorage.getItem("weatherInfo");
+				const weatherData = JSON.parse(weatherSessionStorage);
+				const location = weatherData.name;
+				const temperature = Math.round(weatherData.main.temp);
+				const pressure = weatherData.main.pressure;
+				const humidity = weatherData.main.humidity;
+				const windSpeed = weatherData.wind.speed;
+				const milesPerHour = Math.round(parseInt(windSpeed) * 2.237);
+				const feelsLike = Math.round(weatherData.main.feels_like);
+				const weather = weatherData.weather[0].main;
+
+				for (let i = 0; i < weatherIconData.length; i++) {
+					if (weather === weatherIconData[`${i}`].Title) {
+						if (weatherIconArea === "") {
+							var animItem = bodymovin.loadAnimation({
+								wrapper: weatherIcon,
+								animType: weatherIconData[`${i}`].animType,
+								loop: true,
+								path: weatherIconData[`${i}`].animData
+							});
+							break;
+						} else {
+							weatherIconArea.innerHTML = "";
+							var animItem = bodymovin.loadAnimation({
+								wrapper: weatherIcon,
+								animType: weatherIconData[`${i}`].animType,
+								loop: true,
+								path: weatherIconData[`${i}`].animData
+							});
+						}
+					}
+				}
+
+				const weatherInfo = '<div class="weatherDivs" style="margin-top:none; width="90%">Current weather in ' + location + '</div> <div class="weatherDivs">Temperature: <div onclick="convertTemp1()" id="temperature1">' + temperature + 'c</div></div><div class="weatherDivs">Feels Like: <div onclick="convertTemp2()" id="temperature2">' + feelsLike + 'c</div></div><div class="weatherDivs">Humidity: ' + humidity + '&#37;</div><div class="weatherDivs">Wind Speed: ' + milesPerHour + 'mph</div>';
+				weatherArea.innerHTML = weatherInfo;
+				//weatherIcon.innerHTML = weatherIconImage;
+			} else {
+				setTimeout(getWeatherInfo, 100);
+			}
+		});
 }
 
 

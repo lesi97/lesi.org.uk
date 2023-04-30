@@ -5,7 +5,14 @@
 	*{
 		font-family: sans-serif;
 	}
-	body{
+	#weatherIcon{
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		right: 10px;
+		top:10px;
+	}
+	body {
 		background: rgba(204,105,224,1);
 		background: -moz-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
 		background: -webkit-linear-gradient(-45deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
@@ -22,6 +29,7 @@
 		margin-left: auto;
 		padding-bottom: 20px;
 		vertical-align: top;
+		position:relative;
 		
 		/* Temp Below 
 		background-color: green;*/
