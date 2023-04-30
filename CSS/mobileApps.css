@@ -5,7 +5,14 @@
 	*{
 		font-family: sans-serif;
 	}
-	body{
+	#weatherIcon {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	body {
 		background: rgba(204,105,224,1);
 		background: -moz-linear-gradient(-180deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
 		background: -webkit-linear-gradient(-180deg, rgba(204,105,224,1) 0%, rgba(78,27,219,1) 100%);
@@ -15,15 +22,13 @@
 		margin: 0px;
 		overflow-x: hidden;
 		width: 100%;
-		
+		text-align: center;
 	}
-	main{
-		justify-content: center;
-		align-items: center;
+	main {
 		display: inline-block;
-		width: 90%;	
+		width: 90%;
 		margin: 0px 5% 0px 5%;
-		
+		position: relative;
 		/* Temp Below 
 		background-color: green;
 		margin: 10px;
@@ -295,9 +300,7 @@
 		margin: 0;
 	}
 	
-	#weatherIcon{
-		visibility: hidden;
-	}
+
 	
 	
 	
