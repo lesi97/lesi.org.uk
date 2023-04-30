@@ -1,0 +1,5 @@
+Mist
+Cloud
+Snow
+Clear 
+  - This is a sun icon

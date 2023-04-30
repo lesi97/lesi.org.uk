@@ -6,7 +6,7 @@ window.onload = function () {
 
 function updateNavbar() {
 	const navbar = document.getElementById("navbar");
-	fetch('/data/navbar.json')
+	fetch('/assets/data/navbar.json')
 		.then(response => response.json())
 		.then(data => {
 			const navbarData = data.navbar;
@@ -71,7 +71,7 @@ function mobileMenu() {
 }
 
 function updateFooter() {
-	fetch('/data/footer.json')
+	fetch('/assets/data/footer.json')
 		.then(response => response.json())
 		.then(data => {
 			const footerData = data.Footer;

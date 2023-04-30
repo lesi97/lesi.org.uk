@@ -1,0 +1,53 @@
+{
+	"navbar": [
+		{
+			"Title": "Home",
+			"Image": "/assets/images/emote56.png",
+			"Link": "home.html",
+			"MobileHide": false,
+			"Active": true
+		},
+		{
+			"Title": "Aspect Ratio Calculator",
+			"Link": "aspectratiocalculator.html",
+			"MobileHide": false,
+			"Active": true
+		},
+		{
+			"Title": "PDF Converter",
+			"Link": "pdfconverter.html",
+			"MobileHide": true,
+			"Active": true
+		},
+		{
+			"Title": "Icon Converter",
+			"Link": "icoconverter.html",
+			"MobileHide": true,
+			"Active": true
+		},
+		{
+			"Title": "Password Generator",
+			"Link": "passwordgenerator.html",
+			"MobileHide": false,
+			"Active": true
+		},
+		{
+			"Title": "SVG Converter",
+			"Link": "svgconverter.html",
+			"MobileHide": true,
+			"Active": true
+		},
+		{
+			"Title": "Weight Converter",
+			"Link": "weightconverter.html",
+			"MobileHide": false,
+			"Active": true
+		},
+		{
+			"Title": "Store",
+			"Link": "https://store.lesi.org.uk",
+			"MobileHide": false,
+			"Active": false
+		}
+	]
+}

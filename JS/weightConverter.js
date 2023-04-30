@@ -7,14 +7,14 @@ function weightConverter(source,valNum) {
   var inputStones = document.getElementById("inputStones");
   if (source=="inputPounds") {
     inputKilograms.value=(valNum/2.2046).toFixed(4);
-    inputOunces.value=(valNum*16).toFixed(4);
+    inputOunces.value=(valNum*16).toFixed(0);
     inputGrams.value=(valNum/0.0022046).toFixed(4);
     inputStones.value=(valNum*0.071429).toFixed(4);
   }
   if (source=="inputKilograms") {
     inputPounds.value=(valNum*2.2046).toFixed(4);
     inputOunces.value=(valNum*35.274).toFixed(4);
-    inputGrams.value=(valNum*1000).toFixed(4);
+    inputGrams.value=(valNum*1000).toFixed(0);
     inputStones.value=(valNum*0.1574).toFixed(4);
   }
   if (source=="inputOunces") {
@@ -25,14 +25,14 @@ function weightConverter(source,valNum) {
   }
   if (source=="inputGrams") {
     inputPounds.value=(valNum*0.0022046).toFixed(4);
-    inputKilograms.value=(valNum/1000).toFixed(4);
+    inputKilograms.value=(valNum/1000).toFixed(2);
     inputOunces.value=(valNum*0.035274).toFixed(4);
     inputStones.value=(valNum*0.00015747).toFixed(4);
   }
   if (source=="inputStones") {
-    inputPounds.value=(valNum*14).toFixed(4);
+    inputPounds.value=(valNum*14).toFixed(0);
     inputKilograms.value=(valNum/0.15747).toFixed(4);
-    inputOunces.value=(valNum*224).toFixed(4);
+    inputOunces.value=(valNum*224).toFixed(0);
     inputGrams.value=(valNum/0.00015747).toFixed(4);
   }
 
