@@ -4,23 +4,26 @@ window.onload = function () {
 	getGeoLocationData();
 };
 
+let geoLocalData = [];
+
 //####################################################################################################################
 
 function getIp() { // The php script does not work on localhost
 	const xhr = new XMLHttpRequest();
 	xhr.open('GET', './php/ip.php', true);
 	xhr.onload = function () {
-		const ipv4 = this.response;
-		sessionStorage.setItem("ipv4", ipv4);
+		//const ipv4 = this.response;
+		const ipv4 = "86.22.174.168";
+		geoLocalData["ipv4"] = ipv4;
 	}
 	xhr.send();
 }
-getIp(); // This is here as the window.onload doesn't seem to work here, will fix it another day :)
+getIp(); 
 
 //####################################################################################################################
 
 function getTime() {
-	const ipv4 = sessionStorage.getItem("ipv4");
+	const ipv4 = geoLocalData.ipv4;
 	xhr = new XMLHttpRequest();
 	xhr.open('GET', 'https://worldtimeapi.org/api/ip/' + ipv4, true);
 	xhr.onload = function () {
@@ -69,7 +72,7 @@ setInterval(getTime, 1000);
 
 function getGeoLocationData() {
 	const url = "https://ipwhois.app/json/";
-	const ipv4 = sessionStorage.getItem("ipv4");
+	const ipv4 = geoLocalData.ipv4;
 	const xhr = new XMLHttpRequest();
 	xhr.open('GET', url + ipv4, true);
 	xhr.setRequestHeader('Accept', 'application/json');
@@ -80,8 +83,8 @@ function getGeoLocationData() {
 			//console.log(data);
 			const latitude = data.latitude;
 			const longitude = data.longitude;
-			sessionStorage.setItem("latitude", latitude);
-			sessionStorage.setItem("longitude", longitude);
+			geoLocalData["latitude"] = latitude;
+			geoLocalData["longitude"] = longitude;
 		} else {
 			setTimeout(getGeoLocationData, 1000);
 		}
@@ -96,8 +99,8 @@ getGeoLocationData();
 
 function getWeatherInfo() {
 
-	const latitude = sessionStorage.getItem("latitude");
-	const longitude = sessionStorage.getItem("longitude");
+	const latitude = geoLocalData.latitude;
+	const longitude = geoLocalData.longitude;
 
 	const weatherURL = "https://fcc-weather-api.glitch.me/api/current?lat=" + latitude + "&lon=" + longitude;
 
@@ -109,23 +112,21 @@ function getWeatherInfo() {
 		//console.log(this.response);
 		// The api I'm using has a bug where it sometimes thinks you're in Shuzenji, sorry people from Shuzenji
 		if (!this.response.includes("error") && parsedData.name != "Shuzenji") {
-			sessionStorage.setItem("weatherInfo", response);
 			localStorage.setItem("weatherInfo", response);
 		}
 	}
 	xhr.send();
 	updateWeather();
 }
-setInterval(getWeatherInfo(), 1000);
+setInterval(getWeatherInfo(), 10000);
 
 function updateWeather() {
 
 	const mainArea = document.getElementById("box");
 	const weatherArea = document.getElementById("weather");
 
-	if (sessionStorage.getItem("weatherInfo")) {
-
-		const weatherSessionStorage = sessionStorage.getItem("weatherInfo");
+	if (localStorage.getItem("weatherInfo")) {
+		const weatherSessionStorage = localStorage.getItem("weatherInfo");
 		const weatherData = JSON.parse(weatherSessionStorage);
 		const location = weatherData.name;
 		const temperature = Math.round(weatherData.main.temp);
