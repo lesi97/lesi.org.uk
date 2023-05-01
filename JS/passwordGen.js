@@ -1,6 +1,3 @@
-
-import * as scripts from '/JS/scripts.js';
-
 function copyPassword() {
   const copyText = document.getElementById("password");
   copyText.select();
@@ -22,12 +19,3 @@ function generatePassword() {
  
  document.getElementById("password").value = password;
 }
-
-document.getElementById("pwordGenSubmitButton").addEventListener("click", () => {
-    generatePassword();
-});
-
-
-document.getElementById("pwordGenCopyButton").addEventListener("click", () => {
-    copyPassword();
-});

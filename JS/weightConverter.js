@@ -1,6 +1,4 @@
-
-
-function weightConverter(source, valNum) {
+function weightConverter(source,valNum) {
   valNum = parseFloat(valNum);
   var inputPounds = document.getElementById("inputPounds");
   var inputKilograms = document.getElementById("inputKilograms");

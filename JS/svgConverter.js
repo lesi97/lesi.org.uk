@@ -1,6 +1,3 @@
-
-import * as scripts from '/JS/scripts.js';
-
 /* SVG to PNG (c) 2017 CY Wong / myByways.com */
 var text = document.getElementById('svgInputArea');
 text.wrap = 'on';
