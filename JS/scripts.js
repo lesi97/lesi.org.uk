@@ -213,7 +213,8 @@ function checkUserPreferences() {
 			uploadBox.style.background = "linear-gradient(135deg, rgba(0,0,0,1) 0%, rgba(33,8,36,1) 49%, rgba(8,9,9,1) 100%)";
 			uploadBox.style.outline = "2px dashed #f2f2f2";
 			uploadBox.style.outline = "2px dashed #f2f2f2";
-			uploadBox.style.boxShadow = "-5px 10px 30px rgba(242, 242, 242, 0.3)"
+			//uploadBox.style.boxShadow = "-5px 10px 30px rgba(242, 242, 242, 0.3)"
+			uploadBox.style.boxShadow = "none;"
 		}
 
 
