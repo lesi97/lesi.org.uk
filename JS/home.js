@@ -118,7 +118,7 @@ function getWeatherInfo() {
 	xhr.send();
 	updateWeather();
 }
-setInterval(getWeatherInfo, 10000);
+setInterval(getWeatherInfo, 60000); // 60 seconds
 
 function updateWeather() {
 
