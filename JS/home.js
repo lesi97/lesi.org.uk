@@ -1,3 +1,7 @@
+
+import * as scripts from '/JS/scripts.js';
+import * as lottie from '/JS/externalLibraries/lottie.js';
+
 window.onload = function () {
 	getIp();
 	getTime();
@@ -5,6 +9,8 @@ window.onload = function () {
 };
 
 let geoLocalData = [];
+
+
 
 //####################################################################################################################
 
@@ -24,7 +30,7 @@ getIp();
 
 function getTime() {
 	const ipv4 = geoLocalData.ipv4;
-	xhr = new XMLHttpRequest();
+	const xhr = new XMLHttpRequest();
 	xhr.open('GET', 'https://worldtimeapi.org/api/ip/' + ipv4, true);
 	xhr.onload = function () {
 		var time = JSON.parse(this.responseText).datetime;

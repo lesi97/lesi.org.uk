@@ -1,4 +1,6 @@
 
+import * as scripts from '/JS/scripts.js';
+
 function newWidth() {
 
     var ogWidthInput = document.getElementById("initial-width").value;

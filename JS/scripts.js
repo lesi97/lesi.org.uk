@@ -1,3 +1,5 @@
+import * as jquery from '/JS/externalLibraries/jquery-3.1.0.min.js';
+
 window.onload = function () {
 	checkUserPreferences();
 };
@@ -8,8 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	//twitchCheckIfLive();
 	checkUserPreferences();
 });
-
-
 
 
 function updateNavbar() {
@@ -259,7 +259,6 @@ function checkUserPreferences() {
 
 
 
-
 // JQuery below just because :)
 
 $(document).ready(function () {
@@ -294,4 +293,3 @@ $(document).ready(function () {
 		});
 	}
 })
-

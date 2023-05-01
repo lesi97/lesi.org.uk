@@ -1,4 +1,7 @@
 
+import * as scripts from '/JS/scripts.js';
+import * as uploadBox from '/JS/uploadBox.js';
+
 async function pdfToPng(pdfFile) {
     // Load the PDF file using https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js
     const pdfData = new Uint8Array(await pdfFile.arrayBuffer());
@@ -38,3 +41,6 @@ frmConvert.addEventListener('submit', async (event) => {
         console.error('PDF to PNG conversion error:', error);
     }
 });
+
+
+import * as pdfWorkers from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js';

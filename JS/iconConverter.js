@@ -1,3 +1,7 @@
+
+import * as scripts from '/JS/scripts.js';
+import * as uploadBox from '/JS/uploadBox.js';
+
 const MaxSize = 256; // 1 << 8
 const MaxFiles = 65536; // 1 << 16
 const FileHeaderSize = 6;
