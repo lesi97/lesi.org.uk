@@ -38,7 +38,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -c-1 --cors -a 192.168.0.174 -o /home.html"
+    "start": "http-server -c-1 --cors -a http://192.168.0.174 -o /home.html"
   },
   "author": "Chris Lesi",
   "license": "ISC"
