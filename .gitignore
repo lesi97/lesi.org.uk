@@ -366,3 +366,4 @@ FodyWeavers.xsd
 
 # Build folder
 build/
+/testPhotoEditor.html
