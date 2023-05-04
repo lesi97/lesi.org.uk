@@ -1,0 +1,39 @@
+# Plain Text
+text/plain txt;
+
+# HTML
+text/html html htm;
+
+# CSS
+text/css css;
+
+# JavaScript
+application/javascript js;
+application/javascript mjs;
+
+# JSON
+application/json json;
+
+# XML
+application/xml xml;
+
+# Images
+image/jpeg jpg jpeg;
+image/png png;
+image/gif gif;
+image/svg+xml svg;
+
+# Audio
+audio/mpeg mp3;
+audio/ogg ogg;
+
+# Video
+video/mp4 mp4;
+video/webm webm;
+
+# Fonts
+font/woff woff;
+font/woff2 woff2;
+font/ttf ttf;
+font/eot eot;
+font/otf otf;

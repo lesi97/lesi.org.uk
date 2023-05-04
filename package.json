@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@ffmpeg/core": "^0.11.0",
+    "@ffmpeg/ffmpeg": "^0.11.6",
+    "@ilovepdf/ilovepdf-nodejs": "^0.2.1",
     "async": "^2.6.4",
     "debug": "^2.6.9",
     "depd": "^2.0.0",
@@ -38,7 +41,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -c-1 --cors -a 192.168.0.174 -o /home.html"
+    "start": "http-server -c-1 --cors -a 192.168.0.174 -o /home.html --mimetypes ./assets/mime.types"
   },
   "author": "Chris Lesi",
   "license": "ISC"
