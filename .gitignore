@@ -367,3 +367,6 @@ FodyWeavers.xsd
 # Build folder
 build/
 /testPhotoEditor.html
+/ffmpegTest.html
+/JS/externalLibraries/ffmpeg
+*.mjs
