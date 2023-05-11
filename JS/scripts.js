@@ -114,6 +114,7 @@ function updateFooter() {
 
 					const newLink = document.createElement("a");
 					newLink.href = footerData[`${i}`].Link;
+					newLink.target = "_blank";
 					newLinkDiv.appendChild(newLink);
 
 					const newFooterIcon = document.createElement("img");
