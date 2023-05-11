@@ -10,7 +10,6 @@
         'x-api-key: ' . $api_key
     ));
 
-
     $response = curl_exec($ch);
     curl_close($ch);
 
@@ -22,22 +21,14 @@
         $aceKillsComma = number_format($aceTracker);
         $terrorAce = "terror currently has " . $aceKillsComma . " kills on his ace";
 
-        if ($aceTracker !== 0) {
-			
-			echo "terror currently has " . $aceKillsComma . " kills on his ace.";
-			
+        if ($aceTracker !== 0) {			
+			echo "terror currently has " . $aceKillsComma . " kills on his ace.";			
 			$jsonData = file_get_contents("terrorKills.json");
 			$data1 = json_decode($jsonData, true);
-			
-			// Update the value of the ace_kills key
 			$data1['ace_kills'] = $aceTracker;
-			
-			// Encode the updated array into JSON and write it back to the file
 			$jsonData = json_encode($data1);
-			file_put_contents("terrorKills.json", $jsonData);
-			
-		} else {
-			
+			file_put_contents("terrorKills.json", $jsonData);			
+		} else {			
 			$aceJson = file_get_contents("terrorKills.json");
 			$aceData = json_decode($aceJson, true);
 			$aceKills = $aceData["ace_kills"];
@@ -46,5 +37,4 @@
 			echo $terrorAce;
 		}
 	}
-
 ?>

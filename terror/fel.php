@@ -9,9 +9,7 @@
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'x-api-key: ' . $api_key
     ));
-
-
-    $response = curl_exec($ch);
+	$response = curl_exec($ch);
     curl_close($ch);
 
     if ($response !== false) {
@@ -21,19 +19,13 @@
         $terrorFel = "terror currently has " . $felKillsComma . " kills on his felwinter";
 
 		if ($felTracker !== null) {
-			echo "terror currently has " . $felKillsComma . " kills on his felwinter.";
-			
+			echo "terror currently has " . $felKillsComma . " kills on his felwinter.";			
 			$jsonData = file_get_contents("terrorKills.json");
 			$data1 = json_decode($jsonData, true);
-			
-			// Update the value of the ace_kills key
 			$data1['felwinter_kills'] = $felTracker;
-			
-			// Encode the updated array into JSON and write it back to the file
 			$jsonData = json_encode($data1);
 			file_put_contents("terrorKills.json", $jsonData);
-		} else {
-			
+		} else {			
 			$felJson = file_get_contents("terrorKills.json");
 			$felData = json_decode($felJson, true);
 			$felKills = $felData["felwinter_kills"];
