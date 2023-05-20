@@ -7,6 +7,9 @@ RewriteRule ^ /%1 [NC,L,R]
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^ %{REQUEST_URI}.html [NC,L]
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
 DirectoryIndex home.html
 
 Redirect 302 "https://store.lesi.org.uk/aspectratiocalculator" "https://store.lesi.org.uk"
